@@ -24,7 +24,6 @@ class ExerciseTwoTests(unittest.TestCase):
         capturedOutput = io.StringIO()
         sys.stdout = capturedOutput
         color = mock_input()
-        color = mock_input()
         function = undecorated(colors_valid)
         result = function(color)
         sys.stdout = sys.__stdout__
@@ -44,7 +43,7 @@ class ExerciseTwoTests(unittest.TestCase):
         self.assertFalse(result)
 
     @patch('builtins.input', side_effect=['verde', 'rojo'])
-    def test_exit_color(self, mock_input):
+    def test_sequence(self, mock_input):
         capturedOutput = io.StringIO()
         sys.stdout = capturedOutput
         color = mock_input()
