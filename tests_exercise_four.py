@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 from exercises.exercise_four import Promo
 
 
-class ExerciseFouTests(unittest.TestCase):
+class ExerciseFourTests(unittest.TestCase):
     def test_is_no_expired(self):
         promo = Promo('2x1',  datetime.today() + timedelta(days=5))
         self.assertTrue(promo.expired)
